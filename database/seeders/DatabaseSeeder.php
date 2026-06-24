@@ -24,5 +24,15 @@ class DatabaseSeeder extends Seeder
             'is_password_set' => true,
             'email_verified_at' => now(),
         ]);
+
+        // Create superadmin 2
+        User::create([
+            'name' => 'Admin Wawancara',
+            'email' => 'wawancara@gmail.com',
+            'password' => bcrypt('123wawancara'),
+            'role' => 'superadmin',
+            'is_password_set' => true,
+            'email_verified_at' => now(),
+        ]);
     }
 }
